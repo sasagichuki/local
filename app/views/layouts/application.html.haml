@@ -1,0 +1,19 @@
+!!!
+%html
+	%head
+		%title My Local
+		= stylesheet_link_tag "application.css"
+		
+	%body
+		.container
+			%ul.nav.nav-pills
+				%li{:role => "presentation"}
+					= link_to "Home", root_path
+				%li{:role => "presentation"}
+					= link_to "About this", pages_about_path
+				%li{:role => "presentation"}
+					= link_to "Contact us", pages_contact_path
+
+			= yield
+			%br
+			%a{:href => "http://www.chaos.co.ke", :target => "_blank"} Copyright
